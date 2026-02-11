@@ -50,7 +50,7 @@ def criar_html(dados):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Notícia do Dia - DevOps</title>
         <style>
-            body {{ font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }}
+            body {{ font-family: Arial, sans-serif; background-color: #F0F8FF; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }}
             .card {{ background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 600px; }}
             h1 {{ color: #333; font-size: 1.5rem; }}
             p {{ color: #666; line-height: 1.6; }}
@@ -61,7 +61,7 @@ def criar_html(dados):
         <div class="card">
             <h1>{titulo}</h1>
             <p>{descricao}</p>
-            <div class="footer">Atualizado automaticamente pelo Robô DevOps do Filipe</div>
+            <div class="footer">Atualizado automaticamente pelo Robô DevOps do Filipe | Atualizado AUTOMATICAMENTE pelo Pipeline do Filipe!</div>
         </div>
     </body>
     </html>
