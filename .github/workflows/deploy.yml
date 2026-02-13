@@ -27,7 +27,7 @@ jobs:
       with:
         python-version: '3.9'
 
-    # 3. Instala as dependências (Requests, etc)
+    # 3. Instala as dependências
     - name: Instalar Dependências
       # Entra na pasta correta antes de rodar
       run: |
@@ -53,6 +53,5 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         # Pega o arquivo da pasta local e joga na pasta do servidor
         source: "Static Site Generation (SSG)/app/index.html"
-        target: "/var/www/html"
-        # O appleboy cria a estrutura de pastas no destino, vamos ajustar isso:
+        target: "/var/www/html":
         strip_components: 2
