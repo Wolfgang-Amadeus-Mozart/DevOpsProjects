@@ -4,18 +4,15 @@
 dnf update -y
 dnf install httpd -y
 
-# 2. Inicia o serviço e garante que ele volte se o servidor reiniciar
+# 2. Iniciando o serviço
 systemctl start httpd
 systemctl enable httpd
 
-# 3. Libera o Firewall (Se for RHEL/CentOS)
-# Se der erro pq não tem firewalld, o script continua (|| true)
+# 3. Liberando firewall
 firewall-cmd --permanent --add-service=http || true
 firewall-cmd --reload || true
 
-# 4. O PULO DO GATO (Permissões de Deploy) 🐱
-# Mudamos o dono da pasta html para o usuário padrão (ec2-user)
-# Assim, você consegue copiar arquivos pra lá sem usar sudo!
+# 4. Mudando o dono da pasta para ec2-user
 chown -R ec2-user:ec2-user /var/www/html
 chmod -R 755 /var/www/html
 
